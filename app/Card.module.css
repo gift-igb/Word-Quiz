@@ -1,0 +1,45 @@
+
+.card{
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    perspective: 600px;
+    transition: all 0.2s;
+    
+
+  }
+  .card:hover{
+    transform: translateY(-20px);
+    
+  }
+ 
+  
+  .upside, .downside{
+    position: absolute;
+    inset: 0;
+    transition: 1s ease-out;
+    backface-visibility: hidden;
+  }
+  
+
+  .upside{
+    background-color: aqua;
+
+  }
+  
+  .downside{
+    transform: rotateY(-180deg);
+    background-color: bisque;
+
+  }
+
+  .flippedUp{
+    transform: rotateY(180deg);
+  }
+  
+  .flippedDown{
+    transform: rotateY(0);
+  }
+ 
