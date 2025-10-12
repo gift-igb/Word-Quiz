@@ -104,4 +104,7 @@
     display: block;
     pointer-events: default;
   }
+  .difficulty:hover{
+    scale: 1;
+  }
 }
