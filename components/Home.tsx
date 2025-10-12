@@ -1,9 +1,9 @@
 ﻿"use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import CardGrid from "@/components/CardGrid";
-import { WordEntry, WordRecord } from "@/components/types";
+import { WordEntry } from "@/components/types";
 import  Functions from "@/components/Functions"
 import styles from "@/app/(styles)/Cards.module.css";
 import ToggleButton from "@/components/ToggleButton";

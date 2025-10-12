@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef} from 'react'
+import React, { useState } from 'react'
 import styles from "@/app/(styles)/Functions.module.css"
 import { useSession } from 'next-auth/react';
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
     handleDifficulty: (id:number, func:"add" | "remove") => void;
 }
 function Functions({handleNext, handleDifficulty,difficulty}:Props) {
-    const [isPopUp, setIsPopUp] = useState<Boolean>(false)
+    const [isPopUp, setIsPopUp] = useState<boolean>(false)
     const { data: sesstion } = useSession()
     
 

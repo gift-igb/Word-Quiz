@@ -3,7 +3,7 @@
 import Card from "@/components/Card";
 import styles from "@/app/(styles)/Cards.module.css";
 import { WordEntry } from "@/components/types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSession } from "next-auth/react";
 
 type CardGridProps = {
@@ -24,13 +24,7 @@ type CardGridProps = {
 
 const CardGrid = ({ stopTimer, cards, activeCardId, isGameActive, score, timeLeft, handleTimer, onSelect, handleMarked, correctCard, gameTime, status, wrongWords}: CardGridProps) => {
   
-  const [isOpen, setIsOpen] = useState(false);
-  const [totalScore, setTotalScore] = useState<number>(0)
   const { data: sesstion } = useSession()
-  const handleToggle = () => {
-    setIsOpen((prev) => !prev);
-  };
-  
 
 
   const isLocked = activeCardId !== null;
@@ -41,7 +35,7 @@ const CardGrid = ({ stopTimer, cards, activeCardId, isGameActive, score, timeLef
       ? `Oops! the correct answer is ${correctCard?.ja??"no data"}`
       : "";
 
-  let prompt = correctCard?.en ?? undefined
+  const prompt = correctCard?.en ?? undefined
 
   const classify = (correct: number, wrong: number): string => {
      

@@ -21,10 +21,7 @@ const Card = ({id, en, ja, status, isCorrect, isFlipped, isLocked, isGameActive,
   const[isCheked,setIsChecked] = useState<boolean>(isMarked)
   const { data: sesstion} = useSession()
 
-  const clickMark = (id:number) =>{
-    handleMarked(id)
-    setIsChecked(!isCheked)
-  }
+
 
   useEffect(() => {
     setIsChecked(isMarked);
