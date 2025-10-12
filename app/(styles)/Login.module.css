@@ -1,0 +1,79 @@
+.x{
+    cursor: default;
+}
+
+.loginBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1.5px solid black;
+    transition: all 0.2s;
+}
+.loginBtn:hover{
+    color: white;
+    background-color: black;
+}
+.loginBtn:active{
+    background-color: rgba(0, 0, 0, 0.543);
+}
+
+.upperContainer{
+
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    max-width: 90vw;
+    aspect-ratio: 3/1;
+    border: 1.5px solid rgb(81, 81, 81);
+    box-shadow: 1px 1px 5px 3px rgba(199, 199, 199, 0.256);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 15px;
+
+}
+.element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    color: rgb(109, 109, 109);
+    aspect-ratio: 9/1;
+    border: 1.5px solid rgb(81, 81, 81);
+    border-radius: 5px;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.element:hover{
+    background-color: rgba(243, 243, 243, 0.505);
+}
+.clicked{
+    color: rgb(220, 220, 220);
+    border-color: rgb(220, 220, 220);
+}
+
+@media screen and (max-width: 600px) {
+    .element{
+        font-size: 0.8rem;
+        height: 50px;
+    }
+    .container{
+        gap: 10px;
+        height: 150px;
+    }
+
+}

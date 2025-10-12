@@ -1,14 +1,12 @@
-import React from "react";
-import Cards from "@/components/Cards";
-const Home = () => {
-  return (
-    <div>
-      
-      <Cards/>
-      
-      
-    </div>
-  );
-}
+﻿import React from "react";
 
-export default Home;
+import Home from "@/components/Home";
+
+const Page = () => {
+  return(
+  <>
+    <Home />
+  </>
+)};
+
+export default Page;

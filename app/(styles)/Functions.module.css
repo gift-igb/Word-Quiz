@@ -1,0 +1,107 @@
+.x{
+    cursor: default;
+}
+.functions{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    width: 80vw;
+    margin-bottom: 80px;
+    
+    max-width: 700px;
+}
+.filterBtn{
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    cursor: pointer;
+    border-radius: 100px;
+    text-align: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.difficulties{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 40px;
+    width: 220px;
+
+    border-radius: 15px;
+    height: 60px;
+    align-items: center;
+    scale: 1 0;
+    transition: all 0.1s ease-in;
+    transform-origin: top;
+    
+  }
+  .popUp{
+    scale: 1;
+}
+  .difficulty{
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    border-radius: 10000px;
+    border: 1px solid rgba(56, 56, 56, 0.537);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .difficulty:hover{
+    scale: 1.05;
+  }
+  .selecting{
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  .filter{
+    margin-top: 40px;
+  }
+  .nextBtn{
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.popUpBg{
+  position: fixed;
+  background-color: rgba(172, 172, 172, 0.183);
+  inset: 0;
+  display: none;
+  pointer-events: none;
+}
+@media screen and (max-width: 600px) {
+  .functions{
+    width: 90vw;
+  }
+  .filterBtn{
+    position: static;
+  }
+  .difficulties{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    width: 250px;
+  }
+  .popUpBg{
+    display: block;
+    pointer-events: default;
+  }
+}

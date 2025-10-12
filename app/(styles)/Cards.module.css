@@ -1,0 +1,332 @@
+﻿.x{
+    /*一つ目のクラスが適用されないバグ回避用*/
+    cursor: default;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  padding: 30px;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+}
+.btn{
+  width: 120px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid lightgreen;
+  border-radius: 9999px;
+  color: lightgreen;
+  font-weight: bold;
+  margin: 0 20px;
+}
+.btn:hover{
+  background-color: lightgreen;
+  color: white;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.headingScore {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+.headingScore span {
+  color: rgb(144, 178, 238);
+  font-size: 3rem;
+  
+}
+.headingWrong {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 20px 30px;
+  padding-top: 0;
+  margin: 0;
+  margin-bottom: 5px;
+  letter-spacing: 1rem;
+}
+.scoreClass{
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 20px 30px;
+  margin: 0;
+  letter-spacing: 1rem;
+  color: lightgreen;
+}
+
+.prompt {
+  font-size: 1.4rem;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.timer{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer p{
+  font-weight: bold;
+  font-size: 20px;
+}
+.timerSpan{
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 9px;
+  transform-origin: left;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: 100px;
+  margin-right: 2%;
+}
+.countDown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  font-size: 100px;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  animation: count 0.5s;
+
+}
+@keyframes count {
+  0%{
+    font-size: 80px;
+  }
+  100%{
+    font-size: 100px;
+  }
+  
+}
+
+.startTimer::after{
+  display: block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 100px;
+  width: var(--progress, 0);
+  background-color: rgb(119, 119, 119);
+  transition: all 1s linear;
+}
+.wrongWordList{
+  text-align: left;
+}
+
+.status {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.statusCorrect {
+  color: #4ade80;
+}
+
+.statusWrong {
+  color: #fe3030;
+}
+
+.controls {
+  width: 100%;
+  max-width: 360px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.field input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(201, 201, 201, 0.6);
+  color: inherit;
+}
+
+.field input::placeholder {
+  color: rgba(44, 44, 44, 0.6);
+}
+
+.error {
+  color: #ff7676;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.submitButton {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9999px;
+  background: lightgreen;
+  color: #04111d;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 188, 212, 0.25);
+}
+
+.cardsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  min-height: 220px;
+  margin-top: 10px;
+  position: relative;
+}
+
+
+
+.wordBank {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wordList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.wordItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wordItem span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wordItem small {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.deleteButton {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 118, 118, 0.8);
+  background-color: transparent;
+  color: #ff7676;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.markButton {
+  padding: 7px 12px;
+  border-radius: 9999px;
+  border: 1px solid lightgreen;
+  background-color: transparent;
+  color: lightgreen;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.markedButton {
+  padding: 7px 12px;
+  border-radius: 9999px;
+  border: 1px solid lightgreen;
+  background-color: lightgreen;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.markButton:hover{
+  background-color: lightgreen;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color:rgba(255, 118, 118);
+  color: #ffffff;
+}
+
+.emptyState {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+.cards{
+  gap: 0px;
+  margin: 0px;
+  margin-bottom: 50px;
+
+}
+.heading{
+  font-size: 1.5rem;
+}
+.headingScore{
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+.headingWrong{
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+.btn{
+  margin:10px;
+}
+}
+
+
+
+
+

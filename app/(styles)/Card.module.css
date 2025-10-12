@@ -1,0 +1,165 @@
+﻿.x{
+/*一つ目のクラスが適用されないバグ回避用*/
+cursor: default;
+}
+.card {
+  width: 160px;
+  height: 200px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(92, 92, 92, 0.363);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+.cardWrapper {
+    width: 160px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+  }
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(197, 237, 255, 0.8);
+  box-shadow: 0 16px 30px rgba(160, 226, 255, 0.25);
+}
+
+.cardLocked {
+  transform: none;
+  box-shadow: none;
+  border-color: rgb(0, 0, 0);
+}
+
+.clicked{
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: rgb(0, 0, 0)!important;
+
+}
+.correct{
+    border-width: 3px;
+    border-color: lightgreen!important;
+}
+.wrong{
+    border-width: 3px;
+    border-color: rgb(255, 66, 66)!important;
+}
+.card:disabled {
+  cursor: default;
+}
+.cardWrapper{
+  position: relative;
+}
+.check {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 12px;
+  border-radius: 9999px;
+  border: 1px solid lightgreen;
+  background-color: transparent;
+  color: lightgreen;
+  font-weight: 600;
+  cursor: pointer;
+}
+.checked {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 7px 12px;
+  border-radius: 9999px;
+  border: 1px solid lightgreen;
+  background-color: lightgreen;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  cursor: pointer;
+}
+.check:hover{
+  background-color: lightgreen;
+  color: white;
+}
+
+.japanese {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.english {
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.englishVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media screen and (max-width: 600px) {
+  .cardWrapper{
+    height: 50px;
+    width: 100vw;
+    gap: 0px;
+    margin: 0;
+    padding: 0;
+  }
+  .card{
+    height: 50px;
+    width: 100vw;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 60px;
+  }
+  .checked {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 9999px;
+    border: 1px solid lightgreen;
+    background-color: lightgreen;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .check {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 9999px;
+    border: 1px solid lightgreen;
+    background-color: rgb(255, 255, 255);
+    color: lightgreen;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .check:hover{
+    background-color: rgb(255, 255, 255);
+    color: lightgreen;
+  }
+
+  .card:hover {
+    transform: translateY(0px);
+    border-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 5px rgba(92, 92, 92, 0.363);
+  }
+}
