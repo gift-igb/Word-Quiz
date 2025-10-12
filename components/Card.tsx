@@ -1,5 +1,4 @@
 ﻿"use client";
-import { useEffect, useState } from "react";
 import styles from "@/app/(styles)/Card.module.css";
 import { useSession } from "next-auth/react";
 
@@ -18,14 +17,11 @@ type Props = {
 };
 
 const Card = ({id, en, ja, status, isCorrect, isFlipped, isLocked, isGameActive, isMarked, onSelect, handleMarked }: Props) => {
-  const[isCheked,setIsChecked] = useState<boolean>(isMarked)
   const { data: sesstion} = useSession()
 
 
 
-  useEffect(() => {
-    setIsChecked(isMarked);
-  }, [isMarked]);
+
   const classNames = [styles.card]
 
   if (isLocked && !isFlipped) {

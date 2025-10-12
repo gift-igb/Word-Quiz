@@ -3,7 +3,6 @@
 import Card from "@/components/Card";
 import styles from "@/app/(styles)/Cards.module.css";
 import { WordEntry } from "@/components/types";
-import { useState } from "react";
 import { useSession } from "next-auth/react";
 
 type CardGridProps = {
@@ -48,7 +47,7 @@ const CardGrid = ({ stopTimer, cards, activeCardId, isGameActive, score, timeLef
 
   return (
     <section className={styles.cardsSection}>
-      <h2 className={styles.heading}>"クイズ式！英単語帳"</h2>
+      <h2 className={styles.heading}>クイズ式！英単語帳</h2>
       {timeLeft === 0 ?
       <div>
         <button className= {styles.btn} onClick={handleTimer}>もう一度</button>
