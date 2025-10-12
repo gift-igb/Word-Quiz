@@ -153,7 +153,7 @@ cursor: default;
   }
   .card{
     color: black;
-    box-shadow: 1px 1px 5px rgba(92, 92, 92, 0.363);
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0);
   }
 
   .check:hover{
