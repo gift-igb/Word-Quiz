@@ -151,6 +151,10 @@ cursor: default;
     justify-content: center;
     align-items: center;
   }
+  .card{
+    color: black;
+    box-shadow: 1px 1px 5px rgba(92, 92, 92, 0.363);
+  }
 
   .check:hover{
     background-color: rgb(255, 255, 255);
@@ -160,6 +164,7 @@ cursor: default;
   .card:hover {
     transform: translateY(0px);
     border-color: rgb(0, 0, 0);
-    box-shadow: 1px 1px 5px rgba(92, 92, 92, 0.363);
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0);
   }
+  
 }
