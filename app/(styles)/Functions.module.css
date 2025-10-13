@@ -96,6 +96,7 @@
     width: 45px;
     height: 45px;
     font-size: 1.2rem;
+    z-index: 100;
   }
   .difficulties{
     position: fixed;
@@ -105,6 +106,7 @@
     background-color: white;
     width: 300px;
     height: 80px;
+    z-index: 10;
   }
   .popUpBg{
     display: block;
