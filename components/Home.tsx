@@ -99,8 +99,8 @@ const Home = () => {
 
   useEffect(()=>{
     const setFirst = async()=>{
-      if (session === undefined) return
-      else if(session){
+      
+      if(session){
         await insertUser(session.user?.email as string, session.user?.name as string)
         const userWordData = await getUserWords(session.user?.email as string)
         console.log(userWordData)
@@ -108,7 +108,7 @@ const Home = () => {
         setRound(createRound(userWordData))
       }
       
-      else if(!session){
+      else {
       
       const wordDb = await getAllWords();
       setWords(wordDb)

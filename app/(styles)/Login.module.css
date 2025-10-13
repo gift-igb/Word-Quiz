@@ -32,7 +32,7 @@
 }
 .container{
     width: 500px;
-    max-width: 90vw;
+    max-width: 90svw;
     aspect-ratio: 3/1;
     border: 1.5px solid rgb(81, 81, 81);
     box-shadow: 1px 1px 5px 3px rgba(199, 199, 199, 0.256);

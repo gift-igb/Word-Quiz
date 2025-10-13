@@ -83,7 +83,7 @@
   background-color: rgba(172, 172, 172, 0.183);
   inset: 0;
   display: none;
-  pointer-events: none;
+  z-index: 2;
 }
 @media screen and (max-width: 600px) {
   .functions{
@@ -92,17 +92,23 @@
   .filterBtn{
     position: static;
   }
+  .difficulty{
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
   .difficulties{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     background-color: white;
-    width: 250px;
+    width: 280px;
+    height: 80px;
   }
   .popUpBg{
     display: block;
-    pointer-events: default;
+    
   }
   .difficulty:hover{
     scale: 1;

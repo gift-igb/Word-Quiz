@@ -12,7 +12,7 @@ function Functions({handleNext, handleDifficulty,difficulty}:Props) {
     
 
     const handlePopUp = () =>{
-        setIsPopUp(!isPopUp)
+        setIsPopUp(prev => !prev)
     }
 
     let array = [1,2,3,4,5]
