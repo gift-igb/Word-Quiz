@@ -2,7 +2,7 @@ https://word-quiz-sss8.vercel.app/
 # How to Use the Quiz-Style Vocabulary App
 
 ## Basic Features
-This app is designed to help learners boost their TOEFL scores through a quiz-style vocabulary trainer. 
+This app is designed to help Japanese learners boost their TOEFL scores through a quiz-style vocabulary trainer. 
 It contains about 4,000 TOEFL-focused words, making it possible to study efficiently while enjoying the process like a game.
 
 ## Linked to TOEFL Score Levels
